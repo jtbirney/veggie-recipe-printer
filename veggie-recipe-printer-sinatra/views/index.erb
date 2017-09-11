@@ -1,0 +1,31 @@
+<!--  YOUR CODE HERE -->
+<!--  printing out the list of ingredients and the directions  -->
+  <h1><%= @name %></h1>
+
+  <ul>
+    <% @ingredients.each do |ingredient| %>
+      <li><%= ingredient %></li>
+    <% end %>
+  </ul>
+
+  <ol>
+    <% @directions.each do |direction| %>
+      <li><%= direction %></li>
+    <% end %>
+  </ol>
+
+
+  <h3>Reviews:</h3>
+
+<!--  printing out the reviews -->
+  <% @reviews.each do |review| %>
+    <h4>
+      <%= review.username %>
+    </h4>
+    <h5>
+      Rating: <%= review.rating %>
+    </h5>
+    <p>
+      <%= review.review %>
+    </p>
+  <% end %>
